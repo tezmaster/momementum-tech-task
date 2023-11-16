@@ -84,10 +84,6 @@ function extractCompanyName(fileOrUrl: string): string {
     return hostnameParts.join(".");
   } else {
     const parts = fileOrUrl.replace(`${dataDirectoryPath}/`, "").replace(".html", "").split(".");
-
-    if (parts.length > 0) {
-    }
-
     return parts[0];
   }
 }
