@@ -12,8 +12,6 @@ const router = express.Router();
 router.post("/drift", async (req, res) => {
   try {
     const data = (req as any).cachedData;
-
-    // Filter the data based on query parameters
     const filteredData = data.filter((item: CompanyData) => {
       return item.hasDrift;
     });
@@ -28,8 +26,6 @@ router.post("/drift", async (req, res) => {
 router.post("/salesForce", async (req, res) => {
   try {
     const data = (req as any).cachedData;
-
-    // Filter the data based on query parameters
     const filteredData = data.filter((item: CompanyData) => {
       return item.hasSalesForce;
     });
